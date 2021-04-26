@@ -173,6 +173,3 @@ class Config:
 
 
 opt = Config()
-# non-sense
-# whatifidothis
-# damnthis
