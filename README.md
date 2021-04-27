@@ -14,8 +14,15 @@ It learns from training data set and validates on the testing data set.
 ## How to run
 * Firstly you need to install all the dependencies.
 * Then run in a Python console, following are some examples:
-> first example
+> ### First example
 > ```
-    $ python train.py --arch waterdsnetf --data_dir /opt/data/private/210421_GA_compare/ --test_data_dir /opt/data/private/210421_GA_compare/ --kind GA_CMP --test_num 1000
+> $ python train.py --arch waterdsnetf --data_dir /opt/data/private/191220_LeakScale_M1/ --test_data_dir /opt/data/private/191220_LeakScale_M1/ --kind 191220_LeakScale_M1
 > ```
-> second example
+> ### Second example (cross dataset validation)
+> ```
+> $ python train.py --arch waterdsnetf --data_dir /opt/data/private/200115_LeakScale_M4/ --test_data_dir /opt/data/private/200115_LeakScale_M5/ --kind _TestWith_200115_LeakScale_M2
+> ```
+> ### Third example (specify testing data set scale)
+> ```
+> $ python train.py --arch waterdsnetf --data_dir /opt/data/private/210421_GA_compare/ --test_data_dir /opt/data/private/210421_GA_compare/ --kind _GA_CMP --test_num 1000
+> ```
