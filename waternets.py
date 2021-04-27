@@ -1,8 +1,8 @@
-import os
-from collections import namedtuple
-import time
+# import os
+# from collections import namedtuple
+# import time
 from torch.nn import functional as F
-import logging
+# import logging
 from torch import nn
 import torch as t
 from collections import OrderedDict
@@ -31,7 +31,7 @@ class WaterNet(nn.Module):
 
     def get_optimizer(self):
         """
-        return optimizer, It could be overwriten if you want to specify
+        return optimizer, It could be overwritten if you want to specify
         special optimizer
         """
         lr = opt.lr
@@ -66,7 +66,7 @@ class WaterNetSmallFL(nn.Module):
 
     def get_optimizer(self):
         """
-        return optimizer, It could be overwriten if you want to specify
+        return optimizer, It could be overwritten if you want to specify
         special optimizer
         """
         lr = opt.lr
@@ -108,7 +108,7 @@ class WaterNetConvFC(nn.Module):
 
     def get_optimizer(self):
         """
-        return optimizer, It could be overwriten if you want to specify
+        return optimizer, It could be overwritten if you want to specify
         special optimizer
         """
         lr = opt.lr
@@ -472,7 +472,7 @@ class WaterDenseNet_self_define(nn.Module):
 
 class AAANet(nn.Module):
     def __init__(self):
-        super(WaterNet, self).__init__()
+        super(AAANet, self).__init__()
         # self.conv1 = nn.Conv2d(1, 2, kernel_size=1)
         self.fc1 = nn.Linear(6, 200)
         self.fc2 = nn.Linear(200, 50)
@@ -492,7 +492,7 @@ class AAANet(nn.Module):
 
     def get_optimizer(self):
         """
-        return optimizer, It could be overwriten if you want to specify
+        return optimizer, It could be overwritten if you want to specify
         special optimizer
         """
         lr = opt.lr

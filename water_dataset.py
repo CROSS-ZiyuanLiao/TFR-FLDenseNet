@@ -1,7 +1,7 @@
 import os
 
-import numpy as np
-import logging
+# import numpy as np
+# import logging
 from config import opt
 
 
@@ -31,10 +31,10 @@ def read_sample(sample_file_path):
             label = opt.labels_dict.index(reallabel)
             datas = [(float(item)) for item in lines[0].split(',')[1:-1]]
         # print(lines[0])
-        #print(len(datas))
-        #print("===========\n")
-        #print(datas[100])
-        #print(datas)
+        # print(len(datas))
+        # print("===========\n")
+        # print(datas[100])
+        # print(datas)
 # for line in lines[1:] :
         #     line = [float(item) for item in line.split(',')]
         #     datas.append(line)
@@ -43,7 +43,6 @@ def read_sample(sample_file_path):
 
 
 class WaterDataset:
-
     def __init__(self, data_dir, num_of_samples='default', split='train'):
         self.data_dir = os.path.join(data_dir, split)
         if num_of_samples == 'default':
@@ -72,8 +71,6 @@ class WaterDataset:
         return label, datas
 
     __getitem__ = get_example
-
-
 
 
 class aaaDataset:
@@ -108,7 +105,7 @@ class aaaDataset:
         if model=='train':
             i = i
         else:
-            i = int(self.num_of_samples*0.0) + i
+            i = int(self.num_of_samples * 0.0) + i
 
         with open(self.data_dir, 'r') as f_data:
             data = [ float(item) for item in f_data.readlines()[i].split()]
@@ -124,5 +121,3 @@ class aaaDataset:
         return label, data
 
     __getitem__ = get_example
-
-

@@ -165,7 +165,6 @@ class Config:
         #                 args.optim, args.batch_size,
         #                 args.lr, args.weight_decay, args.momentum) )
 
-
     def _state_dict(self):
         return {k: getattr(self, k) for k, _ in Config.__dict__.items() \
                 if not k.startswith('_')}
