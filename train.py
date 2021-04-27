@@ -35,6 +35,8 @@ import torch.utils.data.distributed
 # from utils.eval_tool import eval_detection_voc
 # import resource
 
+import fire
+
 best_acc1 = 0
 best_path = None
 lossesnum = 100.0
@@ -494,10 +496,10 @@ def weights_init(m):
 
 
 if __name__ == '__main__':
-    # import fire
-    # fire.Fire()
-    main(arch='waterdsnetf',
-         data_dir='/opt/data/private/210421_GA_compare/',
-         test_data_dir='/opt/data/private/210421_GA_compare/',
-         kind='GA_CMP',
-         test_num=1000)
+    fire.Fire()
+
+    # main(arch='waterdsnetf',
+    #      data_dir='/opt/data/private/210421_GA_compare/',
+    #      test_data_dir='/opt/data/private/210421_GA_compare/',
+    #      kind='GA_CMP',
+    #      test_num=1000)

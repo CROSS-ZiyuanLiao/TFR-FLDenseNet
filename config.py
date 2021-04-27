@@ -59,7 +59,6 @@ class Config:
     predict_name = '_predict.txt'
     activation = 'relu'
 
-
     lr = 0.6
     weight_decay = 0.00005
     lr_decay = 0.33  #
