@@ -494,8 +494,8 @@ def weights_init(m):
 
 
 if __name__ == '__main__':
-    #import fire
-    #fire.Fire()
+    # import fire
+    # fire.Fire()
     main(arch='waterdsnetf',
          data_dir='/opt/data/private/210421_GA_compare/',
          test_data_dir='/opt/data/private/210421_GA_compare/',
