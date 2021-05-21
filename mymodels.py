@@ -12,26 +12,20 @@ class MyModels:
     # waterdsnetf_in4_out58 = waternets.WaterDenseNet_in4_out58()
     # waterdsnetf_self_define = waternets.WaterDenseNet_self_define(growth_rate=opt.growth_rate, num_init_features=opt.num_init_features)
 
-    @staticmethod
     def waterdsnetf_self_define(opt):
         return waternets.WaterDenseNet_self_define(growth_rate=opt.growth_rate, num_init_features=opt.num_init_features,num_classes=len(opt.labels_dict))
 
-    @staticmethod
     def waterdsnetf(opt):
         return waternets.WaterDenseNetFinal(num_classes=len(opt.labels_dict))
 
-    @staticmethod
     def waterdsnetf_in4_out58(opt):
         return waternets.WaterDenseNet_in4_out58(growth_rate=opt.growth_rate, num_init_features=opt.num_init_features, activation=opt.activation,num_classes=len(opt.labels_dict))
 
-    @staticmethod
     def watercnndsnetf_in4_out58(opt):
         return waternets.WaterCNNDenseNet_in4_out58(growth_rate=opt.growth_rate, num_init_features=opt.num_init_features,num_classes=len(opt.labels_dict))
-
-    @staticmethod
+    
     def waternetsmallfl(opt):
         return waternets.WaterNetSmallFL()
 
-    @staticmethod
     def aaanet(opt):
         return waternets.AAANet()
